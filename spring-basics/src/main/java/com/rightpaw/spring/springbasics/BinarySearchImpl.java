@@ -12,7 +12,7 @@ public class BinarySearchImpl {
     @Autowired
     private SortAlgorith sort;
 
-    public BinarySearchImpl(SortAlgorith sort) {
+    public void setSort(SortAlgorith sort) {
         this.sort = sort;
     }
 
