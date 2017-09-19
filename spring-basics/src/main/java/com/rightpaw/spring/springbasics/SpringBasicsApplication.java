@@ -2,11 +2,16 @@ package com.rightpaw.spring.springbasics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class SpringBasicsApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBasicsApplication.class, args);
-	}
+    public static void main(String[] args)
+    {
+        ApplicationContext ac = SpringApplication.run(SpringBasicsApplication.class, args);
+        BinarySearchImpl bsi = ac.getBean(BinarySearchImpl.class);
+        int[] array = {1, 9, 3, 4, 7};
+        int result = bsi.binarySearch(array, 7);
+        System.out.println(result);
+    }
 }
