@@ -1,6 +1,7 @@
 package com.rightpaw.spring.springbasics;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,11 +11,12 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 
     @Autowired
-    private SortAlgorith bubbleSort;
+    @Qualifier("sort")
+    private SortAlgorith sort;
 
     public int binarySearch(int[] array, int numberToSearch)
     {
-        bubbleSort.sort(array);
+        sort.sort(array);
         for (int i = 0; i < array.length; i++)
         {
             if (array[i] == numberToSearch)
