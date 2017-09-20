@@ -1,8 +1,6 @@
-package com.rightpaw.spring.springbasics;
+package com.rightpaw.spring.springbasics.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;

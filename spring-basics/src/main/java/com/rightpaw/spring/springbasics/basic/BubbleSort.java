@@ -1,4 +1,4 @@
-package com.rightpaw.spring.springbasics;
+package com.rightpaw.spring.springbasics.basic;
 
 import org.springframework.stereotype.Component;
 

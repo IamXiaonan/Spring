@@ -1,14 +1,15 @@
 package com.rightpaw.spring.springbasics;
 
+import com.rightpaw.spring.springbasics.basic.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class SpringBasicsApplication {
+public class SpringBasicsBasicApplication {
     public static void main(String[] args)
     {
-        ApplicationContext ac = SpringApplication.run(SpringBasicsApplication.class, args);
+        ApplicationContext ac = SpringApplication.run(SpringBasicsBasicApplication.class, args);
         BinarySearchImpl bsi = ac.getBean(BinarySearchImpl.class);
         BinarySearchImpl bsi2 = ac.getBean(BinarySearchImpl.class);
 
