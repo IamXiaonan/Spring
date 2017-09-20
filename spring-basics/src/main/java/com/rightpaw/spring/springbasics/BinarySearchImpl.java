@@ -10,15 +10,11 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 
     @Autowired
-    private SortAlgorith sort;
-
-    public void setSort(SortAlgorith sort) {
-        this.sort = sort;
-    }
+    private SortAlgorith bubbleSort;
 
     public int binarySearch(int[] array, int numberToSearch)
     {
-        sort.sort(array);
+        bubbleSort.sort(array);
         for (int i = 0; i < array.length; i++)
         {
             if (array[i] == numberToSearch)
