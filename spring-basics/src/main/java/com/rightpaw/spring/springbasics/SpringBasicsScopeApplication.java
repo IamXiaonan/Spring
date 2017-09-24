@@ -1,5 +1,7 @@
 package com.rightpaw.spring.springbasics;
 
+import com.rightpaw.spring.springbasics.cdi.SomeCDIBusiness;
+import com.rightpaw.spring.springbasics.cdi.SomeCDIDAO;
 import com.rightpaw.spring.springbasics.scope.PersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,12 +16,8 @@ public class SpringBasicsScopeApplication {
 
   public static void main(String[] args) {
     ApplicationContext ac = SpringApplication.run(SpringBasicsScopeApplication.class, args);
-    PersonDAO personDAO = ac.getBean(PersonDAO.class);
-    PersonDAO personDAO1 = ac.getBean(PersonDAO.class);
+    SomeCDIBusiness business = ac.getBean(SomeCDIBusiness.class);
 
-    LOGGER.info("{}", personDAO);
-    LOGGER.info("{}", personDAO.getJdbcConnection());
-    LOGGER.info("{}", personDAO1);
-    LOGGER.info("{}", personDAO1.getJdbcConnection());
+    LOGGER.info("{}", business);
   }
 }
