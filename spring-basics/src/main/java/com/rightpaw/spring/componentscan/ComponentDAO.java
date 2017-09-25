@@ -2,11 +2,12 @@ package com.rightpaw.spring.componentscan;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by alinawxn on 9/19/2017.
  */
-@Component
+@Repository
 public class ComponentDAO {
 
     @Autowired
